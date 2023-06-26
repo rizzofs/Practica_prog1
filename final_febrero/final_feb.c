@@ -31,8 +31,8 @@ void proceso()
     FILE *arch1, *arch2, *arch3;
 
     arch1 = fopen("termino.txt", "r");
-    arch2 = fopen("grad_mes.dat", "rw");
-    arch3 = fopen("carreras.dat", "rw");
+    arch2 = fopen("grad_mes.dat", "rb+");
+    arch3 = fopen("carreras.dat", "rb+");
 
     t_termino termino;
     t_grad_mes graduados_mes;
