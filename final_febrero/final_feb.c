@@ -56,7 +56,7 @@ void proceso()
     }
 
     cant_grad_mes = 0;
-    fscanf("%i %i %s %f %i", &mes, &legajo, &nombre_alumno, &promedio, &cod_carrera);
+    fscanf(arch1,"%i %i %s %f %i", &mes, &legajo, &nombre_alumno, &promedio, &cod_carrera);
     while (!feof(arch1))
     {
         cod_carrera_anterior = cod_carrera;
@@ -65,7 +65,7 @@ void proceso()
         {
             cant_grad_carrera++;
             meses[mes]++;
-            fscanf("%i %i %s %f %i", &mes, &legajo, &nombre_alumno, &promedio, &cod_carrera);
+            fscanf(arch1,"%i %i %s %f %i", &mes, &legajo, &nombre_alumno, &promedio, &cod_carrera);
         }
 
         printf("\n >Carrera: %i", cod_carrera_anterior);
@@ -101,4 +101,5 @@ void proceso()
 
 int main(){
     proceso();
+    return 0;
 }
