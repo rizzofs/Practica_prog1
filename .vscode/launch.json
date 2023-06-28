@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Federico/Desktop/Practica_final_prog1/Practica_prog1",
-      "program": "c:/Users/Federico/Desktop/Practica_final_prog1/Practica_prog1/build/Debug/outDebug",
+      "cwd": "c:/Users/Federico/Desktop/Practica_final_prog1/Practica_prog1/TP1",
+      "program": "c:/Users/Federico/Desktop/Practica_final_prog1/Practica_prog1/TP1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
