@@ -9,11 +9,12 @@
 #define MAX 50
 
 int cantidad(int v[], int postivos, int Negativos, int ceros);
-
+int mayorElementoVector(int v[]);
 int main()
 {
     int v[MAX], i, positivos = 0, Negativos = 0, ceros = 0;
     cantidad(v, positivos, Negativos, ceros);
+    mayorElementoVector(v);
     return 0;
 }
 
@@ -49,4 +50,15 @@ int cantidad(int v[], int positivos, int Negativos, int ceros)
     printf("La cantidad de positivos es: %d\n", positivos);
     printf("La cantidad de negativos es: %d\n", Negativos);
     printf("La cantidad de ceros es: %d\n", ceros);
+}
+int mayorElementoVector(int v[]){
+    int i, mayor;
+    mayor = v[0];
+    for (i = 0; i < MAX; i++){
+        if(v[i] > mayor){
+            mayor = v[i];
+        }
+    }
+    printf("\n");
+    printf("El mayor elemento del vector es: %d", mayor);
 }
