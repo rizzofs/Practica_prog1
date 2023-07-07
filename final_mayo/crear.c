@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 typedef struct {
     int dia_mov;
@@ -26,10 +27,18 @@ void crearArchivoMovi() {
     }
 
     // Escribir datos en el archivo
-    fprintf(archivo, "1 1 1\n");
-    fprintf(archivo, "1 2 2\n");
-    fprintf(archivo, "2 1 2\n");
-    fprintf(archivo, "2 2 1\n");
+    int i=1;
+    while(i<365){
+        int aleatorio = rand() % 3;
+        //Numero aleatorio entre 1 y 25
+        int cabina=rand() % 25 + 1;
+        //Numero aleatorio entre 1 y 15
+        int vehiculo=rand() % 15 + 1;
+        fprintf(archivo, "%i %i %i\n",i,cabina,vehiculo);
+        if(aleatorio == 1){
+            i++;
+        }
+    }
 
     fclose(archivo);
 }
@@ -64,16 +73,15 @@ void crearArchivoPrecios() {
     }
 
     // Escribir datos en el archivo
-    t_precios precios;
-    precios.cod_cat_pre = 1;
-    precios.precio_cat_pre = 10.0;
-    fwrite(&precios, sizeof(t_precios), 1, archivo);
-
-    precios.cod_cat_pre = 2;
-    precios.precio_cat_pre = 15.0;
-    fwrite(&precios, sizeof(t_precios), 1, archivo);
-
-    fclose(archivo);
+    int i=1;
+    float precio;
+    while(i<16){
+        fwrite(&i, sizeof(int), 1, archivo);
+        //Generar numero aleatorio en precio entre 1 y 1000
+        precio = (rand() % 1000) + 1;
+        fwrite(&precio, sizeof(float), 1, archivo);
+        i++;
+    }
 }
 
 int main() {
